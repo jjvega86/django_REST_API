@@ -7,4 +7,4 @@ class SongSerializer(serializers.ModelSerializer):
     # note added id even though it isn't explcitely written in model. Database auto-generates the id
     class Meta:
         model = Song
-        fields = ['id', 'title', 'artist', 'album', 'release_date']
+        fields = ['id', 'title', 'artist', 'album', 'release_date', 'likes']
