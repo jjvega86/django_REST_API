@@ -75,8 +75,15 @@ WSGI_APPLICATION = 'music_library.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'mysql.connector.django',
+        'NAME': 'musiclibrary_API',
+        'USER': 'root',
+        'PASSWORD': 'R@diohead97',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+        'OPTIONS': {
+            'autocommit': True
+        }
     }
 }
 
