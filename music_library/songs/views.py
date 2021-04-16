@@ -17,6 +17,10 @@ class SongList(APIView):
         return Response(serializer.data)
 
     def post(self, request):
+        # convert request.data into a new serializer object
+        # check if the request data has all required fields
+        # if so, convert JSON into a model object instance and save to the database
+        # otherwise, return a bad request status
         serializer = SongSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
